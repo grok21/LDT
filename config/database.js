@@ -3,7 +3,7 @@ const Sequelize = require('sequelize')
 module.exports = new Sequelize('test_database', 'admin', 'admin', {
     host: 'localhost', 
     dialect: 'postgres',
-    operatorsAliases: false,
+    operatorsAliases: 1,
 
     pool: {
         max: 5, 
