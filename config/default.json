@@ -1,0 +1,7 @@
+{
+    "port": 5000,
+    "db_name": "test_database",
+    "db_user": "admin",
+    "db_user_password": "admin",
+    "jwtSecret": "secret"
+}

@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize')
+const config = require('config')
 
-module.exports = new Sequelize('test_database', 'admin', 'admin', {
+module.exports = new Sequelize(config.get('db_name'), config.get('db_user'), config.get('db_user_password'), {
     host: 'localhost', 
     dialect: 'postgres',
     operatorsAliases: 1,

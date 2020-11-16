@@ -1,18 +1,18 @@
 const express = require('express')
-const exphbs = require('express-handlebars')
-const bodyParser = require('body-parser')
 const path = require('path')
+const config = require('config')
 const sequelize = require('./config/database')
-
 
 const app = express()
 app.use(express.json())
 
-
 app.get('/', (req, res) => res.send('INDEX'))
-app.use('/auth', require('./routes/auth'))
+app.use('/api/worker', require('./routes/worker'))
+app.use('/api/object', require('./routes/object'))
+app.use('/api/manager', require('./routes/manager'))
 
-const PORT = process.env.PORT || 5000
+
+const PORT = config.get('port') || 5000
 
 
 
